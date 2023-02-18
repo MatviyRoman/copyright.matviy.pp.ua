@@ -1,0 +1,75 @@
+<style>
+    /* copyright */
+    .copyright {
+        position: absolute;
+        left: 10px;
+        bottom: 40px;
+    }
+
+    .copyright.show {
+        position: relative;
+    }
+
+    .copyright .link {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: sans-serif;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        background-color: yellow;
+        border-radius: 3px;
+        transition: border-radius 1.5s linear;
+        color: blue;
+    }
+
+    .copyright .link .description {
+        display: block;
+        position: absolute;
+        top: -110px;
+        left: 0;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px;
+        background-color: blue;
+        color: #fff;
+        border-radius: 3px 3px 0 0;
+        transition: all 1.5s linear;
+        opacity: 0;
+    }
+
+    .copyright .link:hover {
+        border-radius: 0 0 3px 3px;
+        transition: border-radius 1.5s linear;
+    }
+
+    .copyright .link:hover .description {
+        transition: all 1.5s linear;
+        opacity: 1;
+    }
+</style>
+
+<div class="copyright show">
+    <a href="https://apartner.pro" title="Development of sites on laravel, prestashop, wordpress and their support"
+       class="link" target="_blank" rel="dofollow">
+        APARTNER.PRO
+        <strong class="description">Development of sites on Laravel, PrestaShop, Wordpress and their support</strong>
+    </a>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    if ($('.copyright.show .link').attr('href') != 'https://apartner.pro' || $('.copyright .link').is(':hidden') || $('.copyright .link').css('opacity') == 0 || $('.copyright').is(':hidden') || $('.copyright').css('opacity') == 0) {
+        $('.copyright').remove();
+
+        $('body').append(`
+            <div class="copyright">
+                <a href="https://apartner.pro" title="Development of sites on laravel, prestashop, wordpress and their support" class="link" target="_blank" rel="dofollow">
+                        APARTNER.PRO
+                    <strong class="description">Development of sites on Laravel, PrestaShop, Wordpress and their support</strong>
+                </a>
+            </div>
+        `);
+    }
+</script>
