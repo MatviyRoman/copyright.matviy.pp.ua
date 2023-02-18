@@ -1,0 +1,28 @@
+<section class="copyright" style="padding-top: 20px; padding-bottom: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                Сайт створенно компанією <a href="https://apartner.top"
+                   title="Розробка сайтів на cms Wordpress/ prestashop">aPartner.top</a> | <a
+                   href="https://programist.top" title="Розробка сайтів на cms Wordpress/ prestashop">Programist.top</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    if ($('.copyright.show .link').attr('href') != 'https://apartner.pro' || $('.copyright .link').is(':hidden') || $('.copyright .link').css('opacity') == 0 || $('.copyright').is(':hidden') || $('.copyright').css('opacity') == 0) {
+        $('.copyright').remove();
+
+        $('body').append(`
+            <section class="copyright">
+                <a href="https://apartner.pro" title="Development of sites on laravel, prestashop, wordpress and their support" class="link" target="_blank" rel="dofollow">
+                    <h2>
+                        APARTNER.PRO
+                        <strong class="description">Development of sites on Laravel, PrestaShop, Wordpress and their support</strong>
+                    </h2>
+                </a>
+            </section>
+        `);
+    }
+</script>
