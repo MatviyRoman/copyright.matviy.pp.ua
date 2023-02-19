@@ -1,18 +1,8 @@
 <script>
-    var params = new URLSearchParams(document.location.search);
+    var siteUrl = window.location.host;
 
-    console.log(params);
+    console.log(siteUrl);
 
-
-    var copyright = params.get("copyright");
-    var site = params.get("site");
-
-    console.log(copyright, site);
-
-    var copyright = params.post("copyright");
-    var site = params.post("site");
-
-    console.log(copyright, site);
 </script>
 
 <style>
