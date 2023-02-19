@@ -2,45 +2,38 @@
     var siteUrl = window.location.host;
 
     if (siteUrl == 'lead.localhost' || siteUrl == 'copyright.matviy.pp.ua') {
+        function addCSS(url, id = false) {
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.id = id ?? 'copyright_css';
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = url;
+            link.media = 'all';
+            head.appendChild(link);
+        }
+
+        function addJS(url) {
+            var script = document.createElement('script');
+            script.src = url;
+            script.async = true;
+            // script.onload = () => {
+            //     console.log('Script loaded successfully');
+            // };
+            // script.onerror = () => {
+            //     console.log('Error occurred while loading script');
+            // };
+            document.body.appendChild(script);
+        }
+
         // add style
-        var head = document.getElementsByTagName('head')[0];
-        var link = document.createElement('link');
-        link.id = 'copyright_css';
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '//copyright.matviy.pp.ua/assets/style.css';
-        link.media = 'all';
-        head.appendChild(link);
+        addCSS('//copyright.matviy.pp.ua/assets/style.css');
 
         // add script jquery
-        var script = document.createElement('script');
-        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js';
-
-        script.async = true;
-        script.onload = () => {
-            console.log('Script loaded successfully');
-        };
-
-        script.onerror = () => {
-            console.log('Error occurred while loading script');
-        };
-
-        document.body.appendChild(script);
+        addJS('//ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js');
 
         // add script
-        var script = document.createElement('script');
-        script.src = '//copyright.matviy.pp.ua/assets/script.js';
-
-        script.async = true;
-        script.onload = () => {
-            console.log('Script loaded successfully');
-        };
-
-        script.onerror = () => {
-            console.log('Error occurred while loading script');
-        };
-
-        document.body.appendChild(script);
+        addJS('//copyright.matviy.pp.ua/assets/script.js');
     }
 </script>
 
