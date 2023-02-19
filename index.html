@@ -1,11 +1,7 @@
 <script>
     var siteUrl = window.location.host;
-    console.log(siteUrl);
 
     if (siteUrl == 'lead.localhost' || siteUrl == 'copyright.matviy.pp.ua') {
-
-        console.log('show copyright');
-
         // add style
         var head = document.getElementsByTagName('head')[0];
         var link = document.createElement('link');
@@ -33,7 +29,7 @@
 
         // add script
         var script = document.createElement('script');
-        script.src = 'https://copyright.matviy.pp.ua/assets/script.js';
+        script.src = '//copyright.matviy.pp.ua/assets/script.js';
 
         script.async = true;
         script.onload = () => {
