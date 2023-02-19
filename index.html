@@ -1,3 +1,11 @@
+<script>
+    var params = new URLSearchParams(document.location.search);
+    var copyright = params.get("copyright");
+    var site = params.get("site");
+
+    console.log(copyright, site);
+</script>
+
 <style>
     body {
         margin: 0;
