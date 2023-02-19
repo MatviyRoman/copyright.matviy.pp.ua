@@ -1,6 +1,10 @@
 <script>
     var siteUrl = window.location.host;
 
+    if (siteUrl == 'copyright.matviy.pp.ua') {
+        document.createElement("body");
+    }
+
     if (siteUrl == 'lead.localhost' || siteUrl == 'copyright.matviy.pp.ua') {
         function addCSS(url, id = false) {
             var head = document.getElementsByTagName('head')[0];
