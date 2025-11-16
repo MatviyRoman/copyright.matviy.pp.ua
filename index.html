@@ -18,16 +18,18 @@
         }
 
         function addFileJS(url) {
-            var script = document.createElement('script');
-            script.src = url;
-            script.async = true;
-            // script.onload = () => {
-            //     console.log('Script loaded successfully');
-            // };
-            // script.onerror = () => {
-            //     console.log('Error occurred while loading script');
-            // };
-            document.body.appendChild(script);
+            document.addEventListener('DOMContentLoaded', function() {
+                var script = document.createElement('script');
+                script.src = url;
+                script.async = true;
+                // script.onload = () => {
+                //     console.log('Script loaded successfully');
+                // };
+                // script.onerror = () => {
+                //     console.log('Error occurred while loading script');
+                // };
+                document.body.appendChild(script);
+            });
         }
 
         // add style
@@ -41,4 +43,5 @@
         // add script
         addFileJS('//copyright.matviy.pp.ua/assets/script.js');
     }
+
 </script>
